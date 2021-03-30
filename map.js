@@ -10,8 +10,7 @@ function showLocation(position) {
     var latlongvalue = position.coords.latitude + ","
     + position.coords.longitude;
     var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
-    +latlongvalue+"&zoom=14&size=400x300&key
-    =AIzaSyAa8HeLH2lQMbPeOiMlM9D1VxZ7pbGQq8o";
+    +latlongvalue+"&zoom=14&size=400x300&key=AIzaSyCQSdFAeq7AqRbl8pCR2gGc-dGDhxxLNpo";
     document.getElementById("mapholder").innerHTML =
     "<img src='"+img_url+"'>";
  }
