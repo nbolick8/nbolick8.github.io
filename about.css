@@ -168,6 +168,7 @@ hr {
 .clearfix::after {
   content: "";
   clear: both;
+  text-align: center;
   display: inline-block;
 }
 
