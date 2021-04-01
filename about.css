@@ -44,8 +44,9 @@ form {
   
   /* Avatar image */
   img.avatar {
-    top: 150px;
-    width: 40%;
+    top: 200px;
+    width: 10%;
+    height: 10%;
     border-radius: 50%;
   }
   
