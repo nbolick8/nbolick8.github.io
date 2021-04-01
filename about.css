@@ -176,7 +176,8 @@ hr {
     height:20px; 
     width:50%; 
     margin: -20px -50px; 
-    position:fixed;
+    position:absolute;
+    text-align:center;
     top:50%; 
     left:50%;
 }
