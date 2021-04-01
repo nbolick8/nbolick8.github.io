@@ -170,16 +170,8 @@ hr {
   clear: both;
   text-align: center;
   display: inline-block;
-}
-
-.clearfix2 {
-    height:20px; 
-    width:50%; 
-    margin: -20px -50px; 
-    position:absolute;
-    text-align:center;
-    top:50%; 
-    left:50%;
+  width: 500px;
+  margin: 0 auto;
 }
 
 /* Change styles for cancel button and signup button on extra small screens */
