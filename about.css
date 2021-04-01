@@ -176,7 +176,7 @@ hr {
     height:20px; 
     width:50%; 
     margin: -20px -50px; 
-    position:relative;
+    position:fixed;
     top:50%; 
     left:50%;
 }
