@@ -170,6 +170,12 @@ hr {
   margin: 0 auto;
 }
 
+.footer {
+  position: relative;
+  margin-top: -180px;
+  height: 180px;
+}
+
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
