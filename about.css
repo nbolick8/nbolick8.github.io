@@ -11,6 +11,7 @@ form {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    
   }
   
   /* Set a style for all buttons */
@@ -30,11 +31,11 @@ form {
   }
   
   /* Extra style for the cancel button (red) */
-  .cancelbtn {
+  /*.cancelbtn {
     width: auto;
     padding: 10px 18px;
     background-color: #f44336;
-  }
+  }*/
   
   /* Center the avatar image inside this container */
   .imgcontainer {
@@ -49,7 +50,8 @@ form {
   }
   
   /* Add padding to containers */
-  .container {
+  .container * {
+    vertical-align: middle;
     padding: 16px;
   }
   
@@ -70,6 +72,8 @@ form {
     }
   }
 
+/* *****Register CSS*******/
+  
   * {box-sizing: border-box}
 /* Full-width input fields */
   input[type=text], input[type=password] {
@@ -88,7 +92,7 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 /* Set a style for all buttons */
-button {
+/*button {
   background-color: #4abece;
   color: white;
   padding: 14px 20px;
@@ -101,7 +105,7 @@ button {
 
 button:hover {
   opacity:1;
-}
+}*/
 
 /* Extra styles for the cancel button */
 .cancelbtn {
@@ -116,9 +120,9 @@ button:hover {
 }
 
 /* Add padding to container elements */
-.container {
+/*.container {
   padding: 16px;
-}
+}*/
 
 /* The Modal (background) */
 .modal {
