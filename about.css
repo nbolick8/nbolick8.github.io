@@ -171,6 +171,11 @@ hr {
   text-align: center;
   display: inline-block;
 }
+.clearfix2 {
+    text-align: center;
+    width: 300px;
+    height: 40px;
+}
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
