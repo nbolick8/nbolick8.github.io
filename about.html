@@ -5,6 +5,29 @@ $user="root";
 $password="";
 $db="demo";
 
+mysql_connect($host,$user,$password);
+mysql_select_db($db);
+
+if(isset(['username'])){
+
+  $uname=$_POST['username'];
+  $password=$_POST['psw'];
+  
+  $sql="select * from loginform where user='".$uname."'AND Pass='".$password."'
+  limit 1";
+
+  $result=mysql_query($sql);
+
+  if(mysql_num_rows($result)==1) {
+    echo "You have successfully logged in";
+    exit();
+  }
+  else{
+    echo "You have entered an incorrect password.";
+    exit();
+  }
+
+}
 
 
 <!DOCTYPE html>
@@ -186,7 +209,7 @@ $db="demo";
       </div> 
       <div class="container">
         <label for="uname"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email Adress" name="uname" required>
+        <input type="text" placeholder="Enter Email Adress" name="username" required>
     
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
