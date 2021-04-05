@@ -1,3 +1,4 @@
+<?php include('server.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -172,16 +173,16 @@
     </div>
   </nav>
 
-    <form action="/connect.php" method="post">   
+    <form action="/register.php" method="POST">   
       <div class="imgcontainer">
         <img src="images/pets.jpg" alt="" class="avatar">
       </div> 
       <div class="container">
-        <label for="uname"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email Adress" name="username" required>
+        <label><b>Email</b></label>
+        <input type="text" placeholder="Enter Email Adress" name="email" required>
     
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
     
         <button type="submit">Login</button>
         <button onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
@@ -198,26 +199,26 @@
     <!-- The Modal (contains the Sign Up form) -->
     <div id="id01" class="modal">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <form class="modal-content" action="/action_page.php">
+      <form class="modal-content" method="POST" action="/register.php">
         <div class="container">
           <h1>Register Today!</h1>
           <p>Please fill in this form to create an account.</p>
           <hr>
 
-          <label for="fName"><b>First Name</b></label>
-          <input type="text" placeholder="Enter First Name" name="fName" required>
+          <label><b>First Name</b></label>
+          <input type="text" placeholder="Enter First Name" name="firstname" required>
 
-          <label for="lName"><b>Last Name</b></label>
-          <input type="text" placeholder="Enter Last Name" name="lName" required>
+          <label><b>Last Name</b></label>
+          <input type="text" placeholder="Enter Last Name" name="lastname" required>
 
-          <label for="email"><b>Email</b></label>
+          <label><b>Email</b></label>
           <input type="text" placeholder="Enter Email" name="email" required>
     
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <label><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" required>
     
-          <label for="psw-repeat"><b>Confirm Password</b></label>
-          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+          <label><b>Confirm Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="password2" required>
           
           <label>
             <p> Already have an account? <a href="about.html">Login here.</a></p>
@@ -227,7 +228,7 @@
     
           <div class="clearfix">
             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            <button type="submit" class="signupbtn">Sign Up</button>
+            <button type="submit" class="register">Register</button>
           </div>
         </div>
       </form>
