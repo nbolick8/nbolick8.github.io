@@ -10,13 +10,19 @@ if (!empty($lastname)) {
 if (!empty($email)) {
 if (!empty($password)) {
 if (!empty($password2)) {
-$host = "localhost:85";
-$dbusername = "root";
-$dbpassword = "";
-$dbname = "registration";
+//$host = "localhost:85";
+//$dbusername = "root";
+//$dbpassword = "";
+//$dbname = "registration";
+$user = 'root';
+$pass = '';
+$db = 'registration';
 
 // Create connection
-$conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
+//$conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
+$db = new mysqli('localhost:85', $user, $pass, $db) or die("Unable to connect");
+
+echo "Great work!!";
 
 if (mysqli_connect_error()) {
     die('Connect Error('.mysqli_connect_errno().')'
