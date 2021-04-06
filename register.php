@@ -55,7 +55,7 @@ if (mysqli_connect_error()) {
 }
 else {
     $sql = "INSERT INTO users (firstname, lastname, email, password, password2)
-    values ('$firstname', '$lastname', '$email', '$password', '$password2')";
+    VALUES ('$firstname', '$lastname', '$email', '$password', '$password2')";
     if ($conn->query($sql)) {
         echo "New user is successfuly registered.";
     }
