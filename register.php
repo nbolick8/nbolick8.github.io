@@ -11,14 +11,14 @@ if (!empty($lastname)) {
 if (!empty($email)) {
 if (!empty($password)) {
 if (!empty($password2)) {
+/* TAs Code    
+$servername = "localhost";
+$username = "root";
+$password = "root";
     
-    $servername = "localhost";
-    $username = "root";
-    $password = "root";
-    
-    // Create connection
-    $conn = new mysqli($servername, $username, $password);
-    // Check connection
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+// Check connection
     if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
     }
@@ -32,19 +32,19 @@ if (!empty($password2)) {
     }
     
     $conn->close();
-    
+    */
 
-//$host = "localhost:85";
-//$dbusername = "root";
-//$dbpassword = "";
-//$dbname = "registration";
-/*
-$user = 'root';
-$pass = '';
-$db = 'registration';
+$host = "localhost";
+$dbusername = "root";
+$dbpassword = "root";
+$dbname = "registration";
+
+//$user = 'root';
+//$pass = '';
+//$db = 'registration';
 
 // Create connection
-//$conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
+$conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
 $db = new mysqli('localhost:85', $user, $pass, $db) or die("Unable to connect");
 
 echo "Great work!!";
@@ -88,5 +88,5 @@ else {
 else {
     echo "Please enter your first name.";
 die();
-}*/
+}
 ?>
