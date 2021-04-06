@@ -1,6 +1,7 @@
 <?php
 
 $firstname = filter_input(INPUT_POST, 'firstname');
+echo $firstname;
 $lastname = filter_input(INPUT_POST, 'lastname');
 $email = filter_input(INPUT_POST, 'email');
 $password = filter_input(INPUT_POST, 'password');
