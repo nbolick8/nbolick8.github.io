@@ -12,9 +12,9 @@ if (!empty($email)) {
 if (!empty($password)) {
 if (!empty($password2)) {
     
-    $servername = "85";
-    $username = "user";
-    $password = "";
+    $servername = "localhost";
+    $username = "root";
+    $password = "root";
     
     // Create connection
     $conn = new mysqli($servername, $username, $password);
