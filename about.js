@@ -31,7 +31,11 @@
         const promise = auth.signInWithEmailAndPassword(email.value, password.value);
         promise.catch(e => alert(e.message));
 
-        alert("Successfully Logged In!");
+        //alert("Logging In");
+
+        //Redirect users after successfully logging in
+
+
     }
 
     function signOut() {
@@ -42,7 +46,8 @@
     auth.onAuthStateChanged(function(user) {
         if(user) {
             var email = user.email;
-            alert("Active User" + email);
+            alert("Loggin in user: " + email);
+            window.location.href = "/index.html"
         } else {
             alert("No Active User");
         }
