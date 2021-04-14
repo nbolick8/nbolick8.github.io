@@ -36,7 +36,7 @@
 
     function signOut() {
         auth.signOut();
-        alert("Successfully Signed Out!");
+        alert("Successfully Logged Out!");
     }
 
     auth.onAuthStateChanged(function(user) {
