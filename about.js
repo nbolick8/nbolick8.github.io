@@ -32,10 +32,6 @@
         promise.catch(e => alert(e.message));
         
 
-        //alert("Logging In");
-
-        //Redirect users after successfully logging in
-
     }
 
     function signOut() {

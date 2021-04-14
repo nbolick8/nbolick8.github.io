@@ -179,7 +179,7 @@
     </div>
   </nav>
 
-    <h1> Welcome </h1>
+    <h1> Welcome! </h1>
     <div id="formContainer">
       <div id="header"> </div>
 
@@ -188,7 +188,7 @@
     
       <!-- Buttons for Logging in, Resgistration, Logging out -->
       <button onclick="signUp()" id="signUp"> Register </button>
-      <button onclick="signIn()" id="signIn"> Login </button>
+      <button onclick="signIn()" onunload="signOut()" id="signIn"> Login </button>
       <button onclick="signOut()" id="signOut"> Log out </button>
     </div>
 
