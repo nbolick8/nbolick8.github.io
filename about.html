@@ -186,8 +186,8 @@
     <div id="formContainer">
       <div id="header"> </div>
 
-      <input type="email" placeholder="Enter Email Address" id="email" />
-      <input type="password" placeholder="Enter Password" id="password" />
+      <input type="email" placeholder="Email" id="email" />
+      <input type="password" placeholder="Password" id="password" />
     
       <!-- Buttons for Logging in, Resgistration, Logging out -->
       <button onclick="signUp()" id="signUp"> Register </button>
@@ -286,7 +286,7 @@
 
 <style>
   body{
-    background-color: antiquewhite;
+    background-color: white;
   }
   h1{
     margin: 100px auto;
@@ -295,8 +295,8 @@
   }
 
   #formContainer{
-    background-color:rgb(150, 150, 150);
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24) 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color:white;
+    /*box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24) 0 17px 50px 0 rgba(0,0,0,0.19);*/
     width: 25%;
     height: 45%;
     margin: 10px auto;
@@ -343,9 +343,10 @@
     font-size: 13px;
   }
 
-  #signOut{
+  #signIn{
     background-color: #1bb1cc;
     color:dimgrey;
+    font-weight: bold;
     border: none;
     padding: 10px 32px;
     border-radius: 10px;
@@ -354,7 +355,27 @@
     display: inline-block;
     font-size: 13px;
     margin-top: 12px;
-    margin-left: 112px;
+    margin-left: 90px;
+  }
+
+  #signOut{
+    background-color: #1bb1cc;
+    color:dimgrey;
+    font-weight: bold;
+    border: none;
+    padding: 10px 32px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 12px;
+    margin-left: 125px;
+  }
+
+  #imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
   }
 
   button:hover{
