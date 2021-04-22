@@ -2,8 +2,8 @@
 // TODO: Replace with your project's customized code snippet
 const config = {
     // Replace with API Key and Project ID
-     apiKey: "374efb3b3720f0cdd3313fd159938c24156a190c",  
-     projectId: "july18-245d5"  
+     apiKey: "AIzaSyCOLuXau4mjrAoHPuouikZljO57C7oAOQE",  
+     projectId: "registration-f02c9"  
   };
   /* end replace */
   firebase.initializeApp(config);
