@@ -15,11 +15,10 @@ body {
   background: #ffffff;
 }
 
-.container {
+.container1 {
   width: 100%;
   max-width: 960px;
-  margin: 100px;
-  /*margin: 2rem auto;*/
+  margin: 2rem auto;
   
 }
 
