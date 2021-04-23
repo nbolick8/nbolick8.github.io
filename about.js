@@ -43,7 +43,7 @@
         if(user) {
             var email = user.email;
             alert("Loggin in user: " + email);
-            window.location.href = "/index.html"
+            //window.location.href = "/index.html"
             
         } else {
             alert("No Active User");
