@@ -11,7 +11,7 @@ p {
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 100%;
-  color: #b1b1a698;
+  color: #55554e98;
   background: #ffffff;
 }
 
@@ -59,9 +59,9 @@ button {
 }
 
 textarea::placeholder,
-input::placeholder { color: #F4E9CD; }
+input::placeholder { color: #b3afaf; }
 
-.maastricht-blue { background: #ffffff; }
+.maastricht-blue { background: #b3afaf; }
 .teal-blue { background: #468189; }
 .green-sheen { background: #77ACA2; }
 .cambridge-blue { background: #9DBEBB; }
