@@ -31,10 +31,9 @@
         events: function(info, successCallback, failureCallback ) {
       successCallback(events);
         },
-      });
-      function ShowCalendar() {
+      });{}
       calendar.render();
-      }
+      },
       $("#addEvent").on("click", function() {
   events.push({
     title: $("#eventName").val(),
@@ -43,7 +42,7 @@
   });
 
   calendar.refetchEvents();
-    });
+    })
 
   </script>
   
