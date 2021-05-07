@@ -17,11 +17,6 @@
   <link href="css/small-business.css" rel="stylesheet">
   <!--<link href="forum.css" rel="stylesheet">-->
 
-
-  <!-- Bootstrap Date-Picker Plugin -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-
   <meta charset='utf-8' />
   <link href='main.css' rel='stylesheet' />
   <link href='calendar.css' rel='stylesheet' />
@@ -38,18 +33,7 @@
     });
 
   </script>
-  <script>
-    $(document).ready(function(){
-      var date_input=$('input[name="date"]'); //our date input has the name "date"
-      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-      var options={
-        format: 'mm/dd/yyyy',
-        container: container,
-        todayHighlight: true,
-        autoclose: true,
-      };
-      date_input.datepicker(options);
-    })
+  
 </script>
 </head>
 
@@ -95,54 +79,6 @@
 
   <!-- Page Content -->
   <div id='calendar'></div>
-
-  
-  <div class="dropdown">
-    <div class="dropdown-content">
-      <p>Click a calendar date to invoke a Bootstrap Modal Box.</p>
-      <p>Add event title/description, start date, and end date.</p>
-      <p>Click "Save" to save event.</p>
-      <p>Click event again to re-open in Bootstrap Modal Box (Event is non-editable).
-        <p>
-          <p>Click "x" to delete event.</p>
-    </div>
-    <button class="fa dropbtn" style="font-size:24px; margin-left: 75%; color: black"><span>&#xf128;</span></button>
-  </div>
-  
-  <div id='datepicker'></div>
-  
-  <div class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4><input class="modal-title" type="text" name="title" id="title" placeholder="Event Title/Description" /></h4>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-xs-12">
-              <label class="col-xs-4" for="starts-at">Starts at</label>
-              <input type="text" name="starts_at" id="starts-at" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12">
-              <label class="col-xs-4" for="ends-at">Ends at</label>
-              <input type="text" name="ends_at" id="ends-at" />
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="save-event">Save</button>
-        </div>
-      </div>
-      <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-  </div>
-  <!-- /.modal -->
-  <!-- /.container -->
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
