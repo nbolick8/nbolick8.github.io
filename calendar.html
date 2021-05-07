@@ -32,11 +32,15 @@
       {
       calendar.render();
       }
-      $("#addEvent").on("click", function() {
+
+      var eventNameValue = document.getElementById("eventName").value;
+      var eventFromDateValue = document.getElementById("fromDate").value;
+      var eventToDateValue = document.getElementById("toDate").value;
+      calendar.addEvent() = function(){
       events.push({
-      title: $("#eventName").val(),
-      start: $("#fromDate").val(),
-      end: $("#toDate").val()
+      title: eventNameValue,
+      start: eventFromDateValue,
+      end: ventToDateValue
   });
 
   calendar.refetchEvents();
