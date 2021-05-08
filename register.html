@@ -1,78 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+	<title>Register</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Register</title>
-  
   <!--Firebase implementation-->
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
   <script src="login.js"></script>
 
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="css/small-business.css" rel="stylesheet">
-  <!--<link href="login.css" rel="stylesheet">-->
-
 </head>
-
-
 <body onunload="signOut()">
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div id="header" onclick="window.location.href='index.html'"><img src="images/PetCareLogo1.png" height="45" width="150"  alt=""></div>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="mypets.html">My Pets</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="calendar.html">Calendar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="map.html">Map</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="login.html">Login
-                <span class="sr-only">(current)</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+	  <!-- Navigation -->
+	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<div class="container">
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div id="header" onclick="window.location.href='index.html'"><img src="images/PetCareLogo1.png" height="45" width="150"  alt=""></div>
+		  <div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+			  <li class="nav-item">
+          		<a class="nav-link" href="login.html">Login</a>
+          	  </li>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
 
-    <h1> Welcome! </h1>
-    <div id="formContainer">
-      <!--<div id="header"> </div>-->
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+					<span class="login100-form-title p-b-26">
+						Register
+					</span>
+					<span class="login100-form-title p-b-48">
+						<img src="images/PetCareLogoSquare.png" height="75" width="75">
+					</span>
 
-      <input type="email" placeholder="Email" id="email" />
-      <input type="password" placeholder="Password" id="password" />
-    
-      <!-- Buttons for Logging in, Resgistration, Logging out -->
-      <button onclick="signUp()" id="signUp"> Register </button>
-    </div>
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+						<input class="input100" type="email" id="email" />
+						<span class="focus-input100" data-placeholder="Email"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" id="password" />
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn" onclick="signUp()" id="signUp">
+								Register
+							</button>
+						</div>
+					</div>
+
+					<div class="text-center p-t-115">
+						<span class="txt1">
+							Already have an account?
+						</span>
+
+						<a class="txt2" href="login.html">
+							Sign In
+						</a>
+					</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
@@ -82,110 +134,5 @@
     <!-- /.container -->
   </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 </body>
-
-<style>
-  body{
-    background-color: white;
-  }
-  h1{
-    margin: 100px auto;
-    text-align: center;
-    color:black;
-  }
-
-  #formContainer{
-    background-color:white;
-    /*box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24) 0 17px 50px 0 rgba(0,0,0,0.19);*/
-    width: 25%;
-    height: 45%;
-    margin: auto;
-  }
-
- /* #header {
-    width: 100%;
-    height: 10px;
-    background: #3b3b3b;
-  }*/
-
-  #email{
-
-    width: 70%;
-    height: 40px;
-    display: block;
-    margin: 25 auto;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid #3b3b3b;
-  }
-
-  #password{
-
-    width: 70%;
-    height: 40px;
-    display: block;
-    margin: 10 auto;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid #3b3b3b;
-  }
-
-  #signUp{
-    background-color: #80e3f5;
-    color:dimgrey;
-    font-weight: bold;
-    border: none;
-    padding: 15px 32px;
-    border-radius: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 13px;
-  }
-
-  #signIn{
-    background-color: #80e3f5;
-    color:dimgrey;
-    font-weight: bold;
-    border: none;
-    padding: 10px 32px;
-    border-radius: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 13px;
-    margin-top: 12px;
-    margin-left: 90px;
-  }
-
-  #signOut{
-    background-color: #80e3f5;
-    color:dimgrey;
-    font-weight: bold;
-    border: none;
-    padding: 10px 32px;
-    border-radius: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 13px;
-    margin-top: 12px;
-    margin-left: 125px;
-  }
-
-  #center {
-    text-align: center;
-    margin: 24px 0 12px 0;
-  }
-
-  button:hover{
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  }
-</style>
-
-
 </html>

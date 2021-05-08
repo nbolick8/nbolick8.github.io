@@ -30,8 +30,7 @@
 
         const promise = auth.signInWithEmailAndPassword(email.value, password.value);
         promise.catch(e => alert(e.message));
-        
-
+        setTimeout(() => { window.location.href = "index.html"; }, 500);
     }
 
     function signOut() {
@@ -41,12 +40,17 @@
 
     auth.onAuthStateChanged(function(user) {
         if(user) {
-            var email = user.email;
-            alert("Loggin in user: " + email);
-            //window.location.href = "/index.html"
             
         } else {
-            alert("No Active User");
+            if(document.URL.includes("login.html")) {
+
+            } 
+            else if (document.URL.includes("register.html")) {
+
+            }
+            else {
+                window.location.href = "login.html";
+            }
         }
 
     });
