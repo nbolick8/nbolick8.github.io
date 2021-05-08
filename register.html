@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Login</title>
+  <title>Register</title>
   
   <!--Firebase implementation-->
   <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -71,13 +71,7 @@
       <input type="password" placeholder="Password" id="password" />
     
       <!-- Buttons for Logging in, Resgistration, Logging out -->
-      <button onclick="signIn()" onunload="signOut()" id="signIn"> Login </button>
-      <button onclick="signOut()" id="signOut"> Log out </button>
-
-      <br>
-      <br>
-      <p>Don't have an account? Register here!</p>
-      <button onclick="location.href='register.html'" id="signUp"> Register </button>
+      <button onclick="signUp()" id="signUp"> Register </button>
     </div>
 
   <!-- Footer -->
