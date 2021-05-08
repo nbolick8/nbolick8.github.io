@@ -19,8 +19,9 @@
 
         const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
         promise.catch(e => alert(e.message));
+        auth.signInWithEmailAndPassword(email.value, password.value);
 
-        alert("Successfully Registered!");
+        setTimeout(() => { window.location.href = "index.html"; }, 500);
     }
 
     function signIn(){
@@ -55,3 +56,22 @@
 
     });
 
+firebase.auth().createUserWithEmailAndPassword(email, password)
+  .then(function(user) {
+    // get user data from the auth trigger
+    const userUid = user.uid; // The UID of the user.
+    const email = user.email; // The email of the user.
+
+    // set account  doc  
+    const account = {
+      useruid: userUid,
+      calendarEvents: []
+    }
+    firebase.firestore().collection('accounts').doc(userUid).set(account); 
+  })
+  .catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ...
+  });
