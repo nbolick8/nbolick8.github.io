@@ -34,10 +34,15 @@
       var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
         events: [
-    { // this object will be "parsed" into an Event Object
-      title: 'Steve(Cat) - Vet Appt', // a property!
-      start: '2021-05-13', // a property!
-      end: '2021-05-13' // a property! ** see important note below about 'end' **
+    { 
+      title: 'Steve(Cat) - Vet Appt', 
+      start: '2021-05-13', 
+      end: '2021-05-13' 
+    },
+    {
+      title: 'Steve(Cat) - Dropped off at petsitters',
+      start: '2021-05-28',
+      end: '2021-05-31'
     }
   ]
 
@@ -100,8 +105,8 @@
       <div class="row">
         <div class="col-md-12">
           <div class="form-group">
-            <label for="fromDate">Event Name:</label>
-            <input type="text" class="form-control" placeholder="Enter event" id="eventName">
+            <label for="fromDate">Enter Pet Task:</label>
+            <input type="text" class="form-control" placeholder="Add Reminder" id="eventName">
           </div>
         </div>
       </div>
@@ -123,7 +128,7 @@
 
       </div>
 
-      <button type="button" class="btn btn-primary" id="addEvent">Add Event</button>
+      <button type="button" class="btn btn-primary" id="addEvent">Add Reminder</button>
     
     </form>
     
