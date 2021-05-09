@@ -40,14 +40,14 @@
         addEventButton: {
           text: 'Add Reminder',
           click: function() {
-            var dateStr = new Date(document.getElementById("fromDate"));
+            var dateStr = new Date(document.getElementById("fromDate" + 'T00:00:00'));
             var startDateStr = dateStr.toISOString();
-            var dateStrEnd = new Date(document.getElementById("toDate"));
+            var dateStrEnd = new Date(document.getElementById("toDate" + 'T00:00:00'));
             var dateStrEndStr = dateStrEnd.toISOString();
             var titleStr = document.getElementById("eventName");
 
-            var date = new Date(startDateStr); // will be in local time
-            var dateEnd = new Date(dateStrEndStr);
+            var date = new Date(startDateStr + 'T00:00:00'); // will be in local time
+            var dateEnd = new Date(dateStrEndStr + 'T00:00:00');
 
             if (!isNaN(date.valueOf())) { // valid?
               calendar.addEvent({
