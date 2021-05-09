@@ -28,67 +28,27 @@
   <script src="addEvent.js"></script> 
   <script src="main.js"></script>
   <script>
-      document.addEventListener('DOMContentLoaded', function() {
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth'
 
-var calendarEl = document.getElementById('calendar');
-
-
-var calendar = new FullCalendar.Calendar(calendarEl, {
-
-  plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list' ],
-
-  header: {
-
-    center: 'addEventButton'
-
-  },
-
-  customButtons: {
-
-    addEventButton: {
-
-      text: 'add event...',
-
-      click: function() {
-
-        var dateStr = prompt('Enter a date in YYYY-MM-DD format');
-
-        var date = new Date(dateStr + 'T00:00:00'); // will be in local time
-
-
-        if (!isNaN(date.valueOf())) { // valid?
-
-          calendar.addEvent({
-
-            title: 'dynamic event',
-
-            start: date,
-
-            allDay: true
-
-          });
-
-          alert('Great. Now, update your database...');
-
-        } else {
-
-          alert('Invalid date.');
-
-        }
-
+      });
+      {
+      calendar.render();
       }
+      
+      $("#addEvent").on("click", function() {
+      events.push({
+      title: $("#eventName").val(),
+      start: $("#fromDate").val(),
+      end: $("#toDate").val()
+  });
 
-    }
-
-  }
-
+  calendar.refetchEvents();
+  });
 });
-
-
-calendar.render();
-
-});
-
   </script>
   
 </script>
