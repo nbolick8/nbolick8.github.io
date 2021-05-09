@@ -24,10 +24,9 @@
 
   <meta charset='utf-8' />
   <link href='main.css' rel='stylesheet' />
-  <link href='calendar.css' rel='stylesheet' />
   <script src="addEvent.js"></script> 
-
-  <!--
+  <script src="main.js"></script>
+  
   <script>
     
     document.addEventListener('DOMContentLoaded', function() {
@@ -39,19 +38,8 @@
       {
       calendar.render();
       }
-      
-      $("#addEvent").on("click", function() {
-      events.push({
-      title: $("#eventName").val(),
-      start: $("#fromDate").val(),
-      end: $("#toDate").val()
-  });
-
-  calendar.refetchEvents();
-  });
 });
   </script>
- --> 
   
 </script>
 </head>
@@ -95,22 +83,7 @@
 
   <!-- Page Content -->
   <div class="container">
-    <div id="cal-wrap">
-      <!-- [PERIOD SELECTOR] -->
-      <div id="cal-date">
-        <select id="cal-mth"></select>
-        <select id="cal-yr"></select>
-        <input id="cal-set" type="button" value="SET"/>
-      </div>
-    
-      <!-- [CALENDAR] -->
-      <div id="cal-container"></div>
-    
-      <!-- [EVENT] -->
-      <div id="cal-event"></div>
-    </div>
-    
-    <!--
+
     <hr>
 
     <form>
@@ -154,7 +127,7 @@
     </div>
 
   </div>
-  -->
+
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
