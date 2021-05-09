@@ -38,17 +38,20 @@
       },
       customButtons: {
         addEventButton: {
-          text: 'add event...',
+          text: 'Add Reminder',
           click: function() {
-            var dateStr = prompt('Enter a date in YYYY-MM-DD format');
-            var titleStr = prompt('Enter a title for the event');
+            var dateStr = document.getElementById("fromDate");
+            var dateStrEnd = document.getElementById("toDate");
+            var titleStr = document.getElementById("eventName");
 
             var date = new Date(dateStr + 'T00:00:00'); // will be in local time
+            var dateEnd = new new Date(dateStrEnd + 'T00:00:00');
 
             if (!isNaN(date.valueOf())) { // valid?
               calendar.addEvent({
                 title: titleStr,
                 start: date,
+                end: dateEnd,
                 allDay: true
               });
               alert('Great. Now, update your database...');
@@ -108,8 +111,6 @@
   <!-- Page Content -->
   <div class="container">
 
-    <div id="calendar"></div>
-
     <hr>
     <h1>Add Pet Reminders</h1>
     <form>
@@ -139,8 +140,6 @@
         </div>
 
       </div>
-
-      <button type="button" class="btn btn-primary" href="addEvent" id="addEvent">Add Reminder</button>
     
     </form>
     
@@ -148,6 +147,7 @@
 
     <div class="row">
       <div class="col-md-12">
+        <div id="calendar"></div>
       </div>
     </div>
 
