@@ -45,7 +45,7 @@
             var titleStr = document.getElementById("eventName");
 
             var date = new Date(dateStr + 'T00:00:00'); // will be in local time
-            var dateEnd = new new Date(dateStrEnd + 'T00:00:00');
+            var dateEnd = new Date(dateStrEnd + 'T00:00:00');
 
             if (!isNaN(date.valueOf())) { // valid?
               calendar.addEvent({
