@@ -40,14 +40,12 @@
         addEventButton: {
           text: 'Add Reminder',
           click: function() {
-            var dateStr = new Date(document.getElementById("fromDate" + 'T00:00:00'));
-            var startDateStr = dateStr.toISOString();
-            var dateStrEnd = new Date(document.getElementById("toDate" + 'T00:00:00'));
-            var dateStrEndStr = dateStrEnd.toISOString();
+            var dateStr = document.getElementById("fromDate");
+            var dateStrEnd = document.getElementById("toDate");
             var titleStr = document.getElementById("eventName");
 
-            var date = new Date(startDateStr); // will be in local time
-            var dateEnd = new Date(dateStrEndStr);
+            var date = new Date(startDateStr + 'T00:00:00'); // will be in local time
+            var dateEnd = new Date(dateStrEndStr + 'T00:00:00');
 
             if (!isNaN(date.valueOf())) { // valid?
               calendar.addEvent({
@@ -129,15 +127,15 @@
       <div class="row"> 
         <div class="col-md-6">
           <div class="form-group">
-            <label for="fromDate">From:</label>
-            <input type="date" class="form-control" placeholder="Start Date" id="fromDate">
+            <label for="fromDate">Start Date:</label>
+            <input type="text" class="form-control" placeholder="YYYY/MM/DD" id="fromDate">
           </div>
         </div>
         
         <div class="col-md-6">
           <div class="form-group">
-            <label for="toDate">To:</label>
-            <input type="date" class="form-control" id="toDate">
+            <label for="toDate">End Date:</label>
+            <input type="text" class="form-control" placeholder="YYYY/MM/DD" id="toDate">
           </div>
         </div>
 
