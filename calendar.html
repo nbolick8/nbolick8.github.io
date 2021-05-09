@@ -40,10 +40,8 @@
         addEventButton: {
           text: 'Add Reminder',
           click: function() {
-            var dateStr = document.getElementById("fromDate");
-            var dateStrFormat = dateStr.split("-").reverse().join("-");
-            var dateStrEnd = document.getElementById("toDate");
-            var dateStrEndFormat = dateStrEnd.split("/").reverse().join("/");
+            var dateStr = new Date(document.getElementById("fromDate"));
+            var dateStrEnd = new Date(document.getElementById("toDate"));
             var titleStr = document.getElementById("eventName");
 
             var date = new Date(dateStrFormat + 'T00:00:00'); // will be in local time
