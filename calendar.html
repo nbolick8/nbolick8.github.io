@@ -45,13 +45,11 @@
             var titleStr = document.getElementById("eventName");
 
             var date = new Date(dateStr + 'T00:00:00'); // will be in local time
-            var dateEnd = new Date(dateStrEnd + 'T00:00:00');
 
             if (!isNaN(date.valueOf())) { // valid?
               calendar.addEvent({
                 title: titleStr,
                 start: date,
-                end: dateEnd,
                 allDay: true
               });
               alert('Great. Now, update your database...');
