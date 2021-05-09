@@ -41,7 +41,7 @@
           text: 'Add Reminder',
           click: function() {
             var dateStr = document.getElementById("fromDate");
-            var dateStrFormat = dateStr.split("/").reverse().join("/");
+            var dateStrFormat = dateStr.split("-").reverse().join("-");
             var dateStrEnd = document.getElementById("toDate");
             var dateStrEndFormat = dateStrEnd.split("/").reverse().join("/");
             var titleStr = document.getElementById("eventName");
